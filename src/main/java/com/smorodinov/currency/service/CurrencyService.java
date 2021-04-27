@@ -1,13 +1,14 @@
 package com.smorodinov.currency.service;
 
+import com.smorodinov.currency.db.model.CurrencyEntity;
 import com.smorodinov.currency.dto.ConvertResult;
-import com.smorodinov.currency.dto.RateDTO;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public interface CurrencyService {
 
-    ConvertResult getConvertedCurrency(String currencyCodeFrom, String currencyCodeTo, double amount, LocalDate date);
+    ConvertResult getConvertedCurrency(String currencyCodeFrom, String currencyCodeTo, BigDecimal amount, LocalDate date);
 
-    RateDTO getRatesByDate(LocalDate date);
+    CurrencyEntity getCurrencyByDate(LocalDate date);
 }

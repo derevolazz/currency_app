@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 
 
@@ -11,5 +12,5 @@ import java.util.HashMap;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LatestUsdRatesDTO {
-    HashMap<String, Double> rates;
+    HashMap<String, BigDecimal> rates;
 }
